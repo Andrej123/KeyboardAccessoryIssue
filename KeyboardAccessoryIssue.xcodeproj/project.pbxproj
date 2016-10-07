@@ -12,6 +12,8 @@
 		77C7C5BD1DA7B47B00C693D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C7C5BB1DA7B47B00C693D9 /* Main.storyboard */; };
 		77C7C5BF1DA7B47B00C693D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77C7C5BE1DA7B47B00C693D9 /* Assets.xcassets */; };
 		77C7C5C21DA7B47B00C693D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77C7C5C01DA7B47B00C693D9 /* LaunchScreen.storyboard */; };
+		77E7B0FC1DA7C8CE00F3A31E /* AccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77E7B0FA1DA7C8CE00F3A31E /* AccesoryView.swift */; };
+		77E7B0FD1DA7C8CE00F3A31E /* AccesoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77E7B0FB1DA7C8CE00F3A31E /* AccesoryView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		77C7C5BE1DA7B47B00C693D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77C7C5C11DA7B47B00C693D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77C7C5C31DA7B47B00C693D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E7B0FA1DA7C8CE00F3A31E /* AccesoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccesoryView.swift; sourceTree = "<group>"; };
+		77E7B0FB1DA7C8CE00F3A31E /* AccesoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccesoryView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,8 @@
 		77C7C5AB1DA7B47B00C693D9 = {
 			isa = PBXGroup;
 			children = (
+				77E7B0FA1DA7C8CE00F3A31E /* AccesoryView.swift */,
+				77E7B0FB1DA7C8CE00F3A31E /* AccesoryView.xib */,
 				77C7C5B61DA7B47B00C693D9 /* KeyboardAccessoryIssue */,
 				77C7C5B51DA7B47B00C693D9 /* Products */,
 			);
@@ -125,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C7C5C21DA7B47B00C693D9 /* LaunchScreen.storyboard in Resources */,
+				77E7B0FD1DA7C8CE00F3A31E /* AccesoryView.xib in Resources */,
 				77C7C5BF1DA7B47B00C693D9 /* Assets.xcassets in Resources */,
 				77C7C5BD1DA7B47B00C693D9 /* Main.storyboard in Resources */,
 			);
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C7C5BA1DA7B47B00C693D9 /* ViewController.swift in Sources */,
+				77E7B0FC1DA7C8CE00F3A31E /* AccesoryView.swift in Sources */,
 				77C7C5B81DA7B47B00C693D9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

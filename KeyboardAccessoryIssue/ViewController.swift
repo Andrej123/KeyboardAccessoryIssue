@@ -18,6 +18,8 @@ class ViewController: UIViewController {
 
         textField.becomeFirstResponder()
 
+        textField.inputAccessoryView = AccesoryView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 40 ) )
+
     }
 
 }
