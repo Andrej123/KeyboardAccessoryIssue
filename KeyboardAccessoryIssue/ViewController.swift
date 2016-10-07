@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
 
@@ -20,7 +21,59 @@ class ViewController: UIViewController {
 
         textField.inputAccessoryView = AccesoryView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 40 ) )
 
+        setNotificationCategory()
+
     }
 
+    // MARK: Helpers
+    func setNotificationCategory() {
+        let speeakAction = UNNotificationAction(
+            identifier: Constant.speechAction,
+            title: "Speeak recent moment"
+        )
+        let typeAction = UNNotificationAction(
+            identifier: Constant.typeAction,
+            title: "Type ..."
+        )
+        let scheduleAction = UNNotificationAction(
+            identifier: Constant.scheduleAction,
+            title: "Schedule new notification"
+        )
+
+        let commentAction = UNTextInputNotificationAction(
+            identifier: Constant.commentAction,
+            title: "Comment",
+            options: [],
+            textInputButtonTitle: "Send",
+            textInputPlaceholder: "Please, enter text here...")
+
+        let dismiss = UNNotificationAction(
+            identifier: Constant.dismissAction,
+            title: "Dismiss",
+            options: [.destructive]
+        )
+        let category = UNNotificationCategory(
+            identifier: Constant.notificationCategory,
+            actions: [speeakAction, typeAction, scheduleAction, commentAction, dismiss],
+            intentIdentifiers: []
+        )
+
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+    }
+
+}
+
+
+
+
+
+
+struct Constant {
+    static let speechAction     = "speech-action"
+    static let typeAction       = "type-action"
+    static let scheduleAction   = "schedule-action"
+    static let commentAction    = "comment-action"
+    static let dismissAction    = "dismiss"
+    static let notificationCategory = "myNotificationCategory"
 }
 
