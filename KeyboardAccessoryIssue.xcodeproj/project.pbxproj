@@ -302,6 +302,7 @@
 				77C7C5C81DA7B47B00C693D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,8 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak fileprivate var textField:UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        textField.becomeFirstResponder()
 
     }
 
