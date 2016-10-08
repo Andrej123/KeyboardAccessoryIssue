@@ -55,13 +55,12 @@ class AccesoryView: UIView, UIKeyInput {
     }
 
     func insertText(_ text: String) {
-        print("insert text \(text)")
+        print("insertText(\(text)) called.")
         textField.text = (textField.text ?? "") + text
     }
 
     func deleteBackward() {
-        print("\(#function)")
-        if let text = textField.text, text.isEmpty {
+        if let text = textField.text, !text.isEmpty {
             let newText = text.substring(to: text.index(before: text.endIndex))
             textField.text = newText
         }
@@ -72,7 +71,7 @@ class AccesoryView: UIView, UIKeyInput {
     }
 
     override func layoutSubviews() {
-        becomeFirstResponder()
+//        becomeFirstResponder()
     }
 
 }
@@ -81,7 +80,7 @@ class AccesoryView: UIView, UIKeyInput {
 extension AccesoryView: UITextFieldDelegate {
 
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("new string = \(string)")
+        print("delegate for textField(\(string)) called.")
 
         return true
     }
