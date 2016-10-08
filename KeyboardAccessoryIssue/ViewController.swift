@@ -11,19 +11,27 @@ import UserNotifications
 
 class ViewController: UIViewController {
 
+    var accessoryView = AccesoryView()
 
-    @IBOutlet weak fileprivate var textField:UITextField!
+    @IBAction func buttonTapped(sender: AnyObject) {
+        accessoryView.isHidden = false
+        accessoryView.becomeFirstResponder()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        textField.becomeFirstResponder()
-
-        textField.inputAccessoryView = AccesoryView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 40 ) )
-
+        accessoryView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 50)
+        accessoryView.isHidden = true
         setNotificationCategory()
-        
+    }
 
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+
+    override var inputAccessoryView: UIView? {
+        return accessoryView
     }
 
     // MARK: Helpers

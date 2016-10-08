@@ -25,29 +25,26 @@
 To reproduce the issue press the Home button. The notification should appear 5 seconds after that. Try to respond with a comment and you'll see that the Keyboard Accessory is not customised with custom buttons.
 
 Same code is used in the main app and the Keyboard Accessory View is displayed as expected.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AGo-lw-gaq">
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEL-Vt-jSr">
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonTappedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GTO-QQ-bXF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="QEL-Vt-jSr" firstAttribute="top" secondItem="a0Z-pJ-EnS" secondAttribute="bottom" constant="7.5" id="3Y5-Bj-P2Z"/>
                             <constraint firstItem="a0Z-pJ-EnS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="43b-R6-tyO"/>
                             <constraint firstItem="a0Z-pJ-EnS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Lf5-nA-W0S"/>
-                            <constraint firstItem="AGo-lw-gaq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X7m-m7-XdP"/>
+                            <constraint firstItem="QEL-Vt-jSr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NIh-cD-aa8"/>
                             <constraint firstItem="a0Z-pJ-EnS" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="YFQ-LQ-gzO"/>
-                            <constraint firstItem="AGo-lw-gaq" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="h4h-ar-UVM"/>
-                            <constraint firstItem="AGo-lw-gaq" firstAttribute="top" secondItem="a0Z-pJ-EnS" secondAttribute="bottom" constant="36" id="nQK-ja-8dH"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="textField" destination="AGo-lw-gaq" id="mt5-8X-j5q"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

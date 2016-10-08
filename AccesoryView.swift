@@ -16,8 +16,8 @@ class AccesoryView: UIView, UIKeyInput {
     
     // MARK: Actions
     @IBAction func buttonTapped(sender: AnyObject) {
-        print("Tapped \(sender.tag!)")
-        becomeFirstResponder()
+        resignFirstResponder()
+        isHidden = true
     }
 
 
@@ -55,7 +55,6 @@ class AccesoryView: UIView, UIKeyInput {
     }
 
     func insertText(_ text: String) {
-        print("insertText(\(text)) called.")
         textField.text = (textField.text ?? "") + text
     }
 
@@ -70,19 +69,5 @@ class AccesoryView: UIView, UIKeyInput {
         return true
     }
 
-    override func layoutSubviews() {
-//        becomeFirstResponder()
-    }
-
-}
-
-
-extension AccesoryView: UITextFieldDelegate {
-
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        print("delegate for textField(\(string)) called.")
-
-        return true
-    }
 }
 
