@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         textField.inputAccessoryView = AccesoryView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 40 ) )
 
         setNotificationCategory()
+        
 
     }
 
@@ -61,19 +62,5 @@ class ViewController: UIViewController {
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 
-}
-
-
-
-
-
-
-struct Constant {
-    static let speechAction     = "speech-action"
-    static let typeAction       = "type-action"
-    static let scheduleAction   = "schedule-action"
-    static let commentAction    = "comment-action"
-    static let dismissAction    = "dismiss"
-    static let notificationCategory = "myNotificationCategory"
 }
 

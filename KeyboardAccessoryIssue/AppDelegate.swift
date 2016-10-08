@@ -31,47 +31,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-     }
+    }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
 
-        scheduleNotification()
-     }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-     }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-     }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-     }
-
-    // MARK: Helpers
-    func scheduleNotification() {
-
-        // Prepare notification content
-        let content = UNMutableNotificationContent()
-        content.title = "Intorduction to Notifications"
-        content.subtitle = "Session 707 & 708 (advanced)"
-        content.body = "Woah! These new notifications look amazing! Don't you agree?"
-        content.categoryIdentifier = "myNotificationCategory"
-        content.badge = 0
-
-        // Set notification trigger
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-
-        // Prepare notification request
-        let request = UNNotificationRequest(identifier: "FiveSeconds", content: content, trigger: trigger)
-
-        // Add to notification center
-        let center = UNUserNotificationCenter.current()
-        center.add(request) { (error) in
-            if error != nil {
-                print(error)
-            }
-        }
+        Util.scheduleNotification()
     }
 
+    func applicationWillEnterForeground(_ application: UIApplication) {
+    }
+
+    func applicationDidBecomeActive(_ application: UIApplication) {
+    }
+
+    func applicationWillTerminate(_ application: UIApplication) {
+    }
+    
 }
 

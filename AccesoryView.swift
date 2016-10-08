@@ -17,6 +17,7 @@ class AccesoryView: UIView, UIKeyInput {
     // MARK: Actions
     @IBAction func buttonTapped(sender: AnyObject) {
         print("Tapped \(sender.tag!)")
+        becomeFirstResponder()
     }
 
 
@@ -54,7 +55,7 @@ class AccesoryView: UIView, UIKeyInput {
     }
 
     func insertText(_ text: String) {
-        print("insert text")
+        print("insert text \(text)")
         textField.text = (textField.text ?? "") + text
     }
 
@@ -66,6 +67,13 @@ class AccesoryView: UIView, UIKeyInput {
         }
     }
 
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+
+    override func layoutSubviews() {
+        becomeFirstResponder()
+    }
 
 }
 
