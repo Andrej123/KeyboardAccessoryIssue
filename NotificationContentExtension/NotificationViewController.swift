@@ -13,11 +13,12 @@ import UserNotificationsUI
 class NotificationViewController: UIViewController, UNNotificationContentExtension {
 
     @IBOutlet var label: UILabel?
-    
+    var accessoryView = AccesoryView()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        accessoryView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 50)
     }
     
     func didReceive(_ notification: UNNotification) {
@@ -40,8 +41,9 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
             print("schedule new notification")
 
         case Constant.commentAction:
-            //            becomeFirstResponder()
+//            accessoryView.becomeFirstResponder()
 
+            print("didRecive, tapped on Comment.")
             if let textResponse = response as? UNTextInputNotificationResponse {
                 self.label?.text = (self.label?.text ?? "") + " " + textResponse.userText
             }
@@ -59,14 +61,13 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
         }
     }
 
-//    override var canBecomeFirstResponder: Bool {
-//        return true
-//    }
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
 
-    // NEVER CALLED!!!
-//    override var inputAccessoryView: UIView? {
-//        return AccesoryView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 40) )
-//    }
+    override var inputAccessoryView: UIView? {
+        return accessoryView
+    }
 
     func delay(delay: Double, clousure: @escaping ()->() ) {
         let when = DispatchTime.now() + delay

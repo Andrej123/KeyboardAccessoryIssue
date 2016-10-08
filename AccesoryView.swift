@@ -51,7 +51,8 @@ class AccesoryView: UIView, UIKeyInput {
 
     // MARK: - UIKeyInput Protocol
     var hasText: Bool {
-        return textField.text?.isEmpty ?? false
+        guard let isEmpty = textField.text?.isEmpty else { return false }
+        return !isEmpty
     }
 
     func insertText(_ text: String) {
