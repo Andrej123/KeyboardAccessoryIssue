@@ -462,6 +462,7 @@
 				77A1AEC31DA7FF0F0089E99E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77C7C5AF1DA7B47B00C693D9 /* Build configuration list for PBXProject "KeyboardAccessoryIssue" */ = {
 			isa = XCConfigurationList;

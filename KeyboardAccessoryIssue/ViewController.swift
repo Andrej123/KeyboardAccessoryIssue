@@ -63,8 +63,8 @@ class ViewController: UIViewController {
         )
         let category = UNNotificationCategory(
             identifier: Constant.notificationCategory,
-            actions: [speeakAction, typeAction, scheduleAction, commentAction, dismiss],
-//            actions: [typeAction, dismiss],
+//            actions: [speeakAction, typeAction, scheduleAction, commentAction, dismiss],
+            actions: [],
             intentIdentifiers: []
         )
 
