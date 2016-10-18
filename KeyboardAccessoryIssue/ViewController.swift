@@ -36,18 +36,18 @@ class ViewController: UIViewController {
 
     // MARK: Helpers
     func setNotificationCategory() {
-//        let speeakAction = UNNotificationAction(
-//            identifier: Constant.speechAction,
-//            title: "Speeak recent moment"
-//        )
-//        let typeAction = UNNotificationAction(
-//            identifier: Constant.typeAction,
-//            title: "Type ..."
-//        )
-//        let scheduleAction = UNNotificationAction(
-//            identifier: Constant.scheduleAction,
-//            title: "Schedule new notification"
-//        )
+        let speeakAction = UNNotificationAction(
+            identifier: Constant.speechAction,
+            title: "Speeak recent moment"
+        )
+        let typeAction = UNNotificationAction(
+            identifier: Constant.typeAction,
+            title: "Type ..."
+        )
+        let scheduleAction = UNNotificationAction(
+            identifier: Constant.scheduleAction,
+            title: "Schedule new notification"
+        )
 
         let commentAction = UNTextInputNotificationAction(
             identifier: Constant.commentAction,
@@ -63,7 +63,8 @@ class ViewController: UIViewController {
         )
         let category = UNNotificationCategory(
             identifier: Constant.notificationCategory,
-            actions: [/*speeakAction, typeAction, scheduleAction,*/ commentAction, dismiss],
+            actions: [speeakAction, typeAction, scheduleAction, commentAction, dismiss],
+//            actions: [typeAction, dismiss],
             intentIdentifiers: []
         )
 

@@ -30,27 +30,33 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 
         switch response.actionIdentifier {
 
+
         case Constant.speechAction:
             print("Open screen and start speech recognition")
 
         case Constant.typeAction:
+
             print("Open app and show keyboard")
+            accessoryView.isHidden = false
+            self.becomeFirstResponder()
+            accessoryView.becomeFirstResponder()
+
+            print("didRecive, tapped on Comment.")
+            completion(.doNotDismiss)  // not sure what it does
+
 
         case Constant.scheduleAction:
             Util.scheduleNotification()
             print("schedule new notification")
 
         case Constant.commentAction:
-//            accessoryView.becomeFirstResponder()
+
+            accessoryView.isHidden = false
+            self.becomeFirstResponder()
+            accessoryView.becomeFirstResponder()
 
             print("didRecive, tapped on Comment.")
-            if let textResponse = response as? UNTextInputNotificationResponse {
-                self.label?.text = (self.label?.text ?? "") + " " + textResponse.userText
-            }
-
-            delay(delay: 2, clousure: {
-                completion(.dismiss)
-            })
+            completion(.doNotDismiss)  // not sure what it does
 
         case Constant.dismissAction:
             completion(.dismiss)
