@@ -19,8 +19,18 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
     override func viewDidLoad() {
         super.viewDidLoad()
         accessoryView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 50)
+
     }
-    
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        accessoryView.isHidden = false
+        self.becomeFirstResponder()
+        accessoryView.becomeFirstResponder()
+
+    }
+
     func didReceive(_ notification: UNNotification) {
         self.label?.text = notification.request.content.body
     }
