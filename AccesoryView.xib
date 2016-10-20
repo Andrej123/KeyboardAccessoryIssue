@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AccesoryView" customModule="KeyboardAccessoryIssue" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="zJ4-gV-QSm" id="7tI-HR-C20"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJ4-gV-QSm">
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WhC-0G-crl">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="Hyz-tv-BCa"/>
+                    </constraints>
+                    <state key="normal" title="✅"/>
+                    <connections>
+                        <action selector="buttonTappedWithSender:" destination="-1" eventType="touchUpInside" id="rZ0-AX-tau"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVL-Vk-1V2">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="YiC-pR-PXB"/>
+                    </constraints>
+                    <state key="normal" title="❌"/>
+                    <connections>
+                        <action selector="buttonTappedWithSender:" destination="-1" eventType="touchUpInside" id="hkK-xH-3bc"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="zJ4-gV-QSm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="9ou-Ea-IiS"/>
+                <constraint firstItem="SVL-Vk-1V2" firstAttribute="leading" secondItem="WhC-0G-crl" secondAttribute="trailing" constant="12" id="E8U-fZ-A59"/>
+                <constraint firstAttribute="trailing" secondItem="SVL-Vk-1V2" secondAttribute="trailing" constant="16" id="aOF-Td-D9Q"/>
+                <constraint firstItem="WhC-0G-crl" firstAttribute="leading" secondItem="zJ4-gV-QSm" secondAttribute="trailing" constant="8" id="brQ-O5-f5J"/>
+                <constraint firstItem="WhC-0G-crl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cSF-q9-aUO"/>
+                <constraint firstItem="zJ4-gV-QSm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oZw-sY-cMU"/>
+                <constraint firstItem="SVL-Vk-1V2" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rbL-41-Qok"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="33.5" y="55"/>
+        </view>
+    </objects>
+</document>

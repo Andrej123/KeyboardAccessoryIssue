@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,24 +16,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert]) { (granted, error) in
+
+            switch granted {
+            case true:
+                print("notifications allowed")
+            case false:
+                print("notifications not allowed")
+            }
+        }
+
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-     }
+    }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-     }
+
+        Util.scheduleNotification()
+    }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-     }
+    }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-     }
+    }
 
     func applicationWillTerminate(_ application: UIApplication) {
-     }
-
-
+    }
+    
 }
 
